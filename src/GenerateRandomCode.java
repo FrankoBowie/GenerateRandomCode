@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.security.SecureRandom;
 
-public class Main {
+public class GenerateRandomCode {
   private static final SecureRandom generateNumRandom = new SecureRandom();
 
   public static void main(String[] args) {
