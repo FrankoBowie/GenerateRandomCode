@@ -8,16 +8,16 @@ public class Main {
   public static void main(String[] args) {
     ArrayList<String> codeString = new ArrayList();
     Scanner sc = new Scanner(System.in);
-    int answ = 0;
+    char answ = '';
     boolean flag;
     String code = newCode();
     System.out.println("Código Aleatorio: " + code); // Translate: Random Code
     codeString.add(code);
     do {
-      System.out.println("¿Desea crear otro código aleatorio? [Si: 1 No: 2]"); 
-      // Translate: Want to create other random code? [Yes: 1 No: 2]
-      answ = sc.nextInt();
-      if (answ == 1) {
+      System.out.println("¿Desea crear otro código aleatorio? [Si: Ss No: Nn]"); 
+      // Translate: Want to create other random code? [Yes: Ss No: Nn]
+      answ = sc.next().charAt(0);
+      if (answ == s || answ == S) {
         do {
           code = newCode();
           flag = codeComp(code, codeString);
@@ -28,6 +28,7 @@ public class Main {
         break;
       }
     } while (answ == 1);
+    sc.close();
   }
 
   public static String newCode() {
