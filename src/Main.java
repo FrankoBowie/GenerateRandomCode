@@ -8,7 +8,7 @@ public class Main {
   public static void main(String[] args) {
     ArrayList<String> codeString = new ArrayList();
     Scanner sc = new Scanner(System.in);
-    char answ = '';
+    char answ;
     boolean flag;
     String code = newCode();
     System.out.println("Código Aleatorio: " + code); // Translate: Random Code
@@ -17,7 +17,7 @@ public class Main {
       System.out.println("¿Desea crear otro código aleatorio? [Si: Ss No: Nn]"); 
       // Translate: Want to create other random code? [Yes: Ss No: Nn]
       answ = sc.next().charAt(0);
-      if (answ == s || answ == S) {
+      if (answ == 's' || answ == 'S') {
         do {
           code = newCode();
           flag = codeComp(code, codeString);
